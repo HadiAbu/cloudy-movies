@@ -1,0 +1,30 @@
+.search-wrapper{
+    display: grid;
+    grid-template-columns: 5fr 1fr ;
+    gap: 10px;
+}
+.input-wrapper{
+    display: flex;
+    align-items: center;
+
+    background-color: wheat;
+    border-radius: 8px;
+    padding-left: 15px;
+    color: black;
+}
+
+.input, .yearInput{
+    border: none;
+    background-color: transparent;
+    padding: 16px;
+    width: 100%;
+    outline: none;
+    color: inherit;
+}
+.icon{
+    height: 25px;
+    padding-right: 10px;
+}
+.input::placeholder, .yearInput::placeholder{
+    color: rgb(66, 60, 60);
+}

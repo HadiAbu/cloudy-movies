@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Movies from './components/Movies/Movies';
+import SearchInput from './components/SearchInput/SearchInput';
 
-function App() {
+function App() { 
+  const[searchKey, setSearch] = useState('');
+  const[year, setYear] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p className={`${searchKey!==''? 'hidden':'welcome-msg'}`}>Hello World,<br/> Search for your favorite movies</p>
+      <SearchInput onKeyChange={setSearch} onYearChange={setYear}/>
+      {searchKey !== '' ? <Movies searchKey={searchKey} year={year}/>: null}
     </div>
   );
 }
