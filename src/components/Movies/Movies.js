@@ -5,7 +5,7 @@ import './Movies.css';
 const Movies = ({searchKey, year}) => {
     const[movies, setMovies] = useState([]);
     const[currPage, setPage] = useState(1);
-    let API = `http://www.omdbapi.com/?s=${searchKey}${year !== ''? '&y='+year:''}&page=${currPage}&apikey=157f34ed`;
+    let API = `https://www.omdbapi.com/?s=${searchKey}${year !== ''? '&y='+year:''}&page=${currPage}&apikey=157f34ed`;
     const[totalpages, setTotalPages]=useState(0);
 
     useEffect(()=>{
