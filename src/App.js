@@ -19,8 +19,6 @@ function App() {
       </div>
       <br></br>
       {searchKey !== "" ? <Movies searchKey={searchKey} year={year} /> : null}
-      <br></br>
-      <br></br>
       {searchKey === "" && <TopImdb />}
       <footer className="footer">
         Copyright © 2021. Hadi Abu Hamed. All Rights Reserved.
