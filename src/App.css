@@ -5,9 +5,10 @@
   min-height: 100vh;
   padding: 20px;
   overflow: hidden;
+  /* height: 110vh; */
 }
 .welcome-msg {
-  color: white;
+  color: rgb(61, 64, 79);
   font-weight: bolder;
   font-size: 2em;
   padding: 0 2em;
@@ -29,6 +30,12 @@
 }
 .movie-img {
   border-radius: 8px;
+}
+.footer {
+  position: sticky;
+  bottom: 0;
+  padding-top: 20px;
+  background-color: #778466;
 }
 @media only screen and (max-width: 728px) {
   .favorites {
